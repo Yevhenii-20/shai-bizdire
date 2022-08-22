@@ -92,4 +92,5 @@ $(document).on('click', function() {
     $(".dropdown li").children("ul").stop().slideUp(300);
     $(".header-navigation-block").removeClass('active');
     $("body").removeClass('active');
+    $(".bar").removeClass('change');
 });
