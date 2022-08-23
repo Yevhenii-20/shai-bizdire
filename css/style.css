@@ -72,6 +72,13 @@ input {
     min-height: 100%;
     background-color: rgba(0, 0, 0, 0.45);
     position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 9999;
+}
+
+.overlay.active {
+    display: block;
 }
 
 /* TOPBAR */
@@ -83,6 +90,19 @@ input {
 
 .social-top-bar {
     display: flex;
+    position: relative;
+}
+
+.social-top-bar::before {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background: rgba(216, 215, 215, 0.2);
+    right: 15px;
+    z-index: 17;
+    display: block;
+    top: -2px;
 }
 
 .social-top-bar li {
@@ -724,6 +744,30 @@ input {
     font-size: 14px;
 }
 
+.open-table {
+    background: #ffa22b;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 6px 8px;
+    position: absolute;
+    z-index: 2;
+    font-size: 18px;
+    top: 10px;
+}
+
+.open-table:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ffa22b;
+    border-bottom: 15px solid transparent;
+    width: 0;
+}
+
 .card-title {
     font-weight: 500px;
     font-size: 18px;
@@ -898,6 +942,16 @@ input {
     pointer-events: none;
 }
 
+.flex-review-starts {
+    display: flex;
+    align-items: center;
+}
+
+.flex-review-starts .starts-customer{
+    margin-top: 0px;
+    margin-right: 4px;
+    font-size: 14px;
+}
 
 
 /* Слайдер */
@@ -1249,8 +1303,7 @@ input {
 
       .logotype-block {
           margin-left: -30px;
-      }
-    
+      }   
 }
 
 @media screen and (max-width: 768px) {
@@ -1311,6 +1364,10 @@ input {
     }
 
     .dropdown {
+        display: none;
+    }
+
+    .social-top-bar::before {
         display: none;
     }
 }

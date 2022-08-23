@@ -79,6 +79,7 @@ $( document ).ready(function() {
         $(".bar").toggleClass('change');
         $(".header-navigation-block").toggleClass('active');
         $("body").toggleClass('active');
+        $(".overlay").toggleClass('active');
        });
 
        $(".header-navigation-block").on("click",function(event){
@@ -93,4 +94,5 @@ $(document).on('click', function() {
     $(".header-navigation-block").removeClass('active');
     $("body").removeClass('active');
     $(".bar").removeClass('change');
+    $(".overlay").removeClass('active');
 });
