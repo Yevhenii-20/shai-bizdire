@@ -168,6 +168,17 @@ $( document ).ready(function() {
     $(".header-navigation-block").on("click",function(event){
         event.stopPropagation();
     });
+
+
+
+
+
+    $('.slider').slider({
+        values: [0, 100],
+        slide: function(event, ui){
+            $('.expand-me').css('width', ui.value + '%');
+        } 
+    });
       
 
 });

@@ -2137,6 +2137,139 @@ input, textarea {
 
 
 
+/*----- SEARCH PAGE -----*/
+
+.header-search-bar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #00148e;
+}
+
+.header-search-bar .search-block {
+    margin-top: 0px;
+}
+
+.flex-search-categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.expand-me { margin: 50px auto; width: 25px; height: 25px; background: #000; }
+
+.section-search-category .categories-block{
+    min-width: 13%;
+}
+
+.section-search-category {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.search-category-item {
+    width: 10%;
+    min-width: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.search-category-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.s-category-img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.name-category-item, .price-category-item, .buy-now {
+    font-size: 12px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #3f3e50;
+    padding-top: 5px;
+}
+
+.buy-now {
+    font-size: 11px;
+}
+
+.price-category-item strong {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.name-category-item:hover {
+    text-decoration: underline;
+}
+
+.ui-slider span:nth-child(2) {
+    display: none;
+}
+
+.slider-ui-category {
+    width: 20%;
+    margin-left: 13px;
+    margin-right: 16px;
+}
+
+.flex-slider-ui {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.ui-state-default {
+    background: #00148e!important;
+    border: 1px solid #00148e!important;
+    outline: none;
+}
+
+.flex-slider-ui i {
+    color: #00148e;
+    font-size: 16px;
+    margin-top: -4px!important;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid #00148e!important;
+}
+
+.button-details {
+    display: inline-block;
+    color: #fff;
+    background-color: #0275d8;
+    border: 1px solid #0275d8;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.button-details:hover {
+    background-color: #398dd6;
+    border: 1px solid #398dd6;
+}
+
+.last-price {
+    color: #e53238;
+    text-decoration: line-through;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 1180px) {
     body {
@@ -2460,6 +2593,21 @@ input, textarea {
         width: 45%;
     }
 
+    .select-category {
+        display: none;
+    }
+    .flex-slider-ui {
+        display: none;
+    }
+
+    .flex-search-categories {
+        margin-top: 0px;
+        
+    }
+
+    .search-category-item {
+        width: 25%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -2527,5 +2675,9 @@ input, textarea {
 
     .select2-container--open {
         width: 240px;
+    }
+
+    .search-category-item {
+        width: 33%;
     }
 }
