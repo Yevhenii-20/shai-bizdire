@@ -2319,6 +2319,9 @@
 .fa-map-marker:before {
     content: "\f041";
 }
+.fa-grid-2:before {
+  content: "\e196";
+}
 .sr-only {
   position: absolute;
   width: 1px;
