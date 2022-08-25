@@ -1819,6 +1819,7 @@ input, textarea {
 
 .post-img-block {
     position: relative;
+    display: block;
 }
 
 .post-area {
