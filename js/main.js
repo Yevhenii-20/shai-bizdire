@@ -79,6 +79,82 @@ $( document ).ready(function() {
         }
     );
 
+    $('.post-slider').slick(
+        {
+            infinite: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000
+        }
+    );
+
+    $('.slider-related-post').slick(
+        {
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 530,
+                    settings: {
+                      slidesToShow: 1
+                    }
+                  }
+              ]
+        }
+    );
+
+    $('.big-slider-product').slick(
+        {
+            infinite: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            asNavFor: '.small-slider-product'
+        }
+    );
+
+    $('.small-slider-product').slick(
+        {
+            infinite: true,
+            arrows: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            asNavFor: '.big-slider-product',
+            centerMode: true,
+            focusOnSelect: true,
+            responsive: [
+                {
+                  breakpoint: 1180,
+                  settings: {
+                    slidesToShow: 4
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3
+                  }
+                },
+                {
+                    breakpoint: 530,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  }
+              ]
+        }
+    );
+
     // HEADER BURGER MENU
 
     $(".burger-menu").on("click",".bar",function(event){
