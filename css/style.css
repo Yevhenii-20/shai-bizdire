@@ -425,7 +425,7 @@ input, textarea {
 
 /* CATEGORIES */
 
-.flex-categories {
+.flex-category {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -433,7 +433,7 @@ input, textarea {
     margin-top: 30px;
 }
 
-.categories-block {
+.category-block {
     display: block;
     width: 20%;
     margin: 5px;
@@ -444,19 +444,19 @@ input, textarea {
     border-radius: 3px;
 }
 
-.categories-block:hover img {
+.category-block:hover img {
     transform: scale(1.1);
     transition: 0.3s;
 }
 
 
-.categories-image {
+.category-image {
     height: 170px;
     width: 100%;
     border-radius: 3px;
 }
 
-.categories-name {
+.category-name {
     position: absolute;
     box-sizing: border-box;
     background: linear-gradient(rgba(40, 35, 47, 0.4) 10%, rgba(40, 35, 47, 0.95));
@@ -2157,7 +2157,7 @@ input, textarea {
 
 .expand-me { margin: 50px auto; width: 25px; height: 25px; background: #000; }
 
-.section-search-category .categories-block{
+.section-search-category .category-block{
     min-width: 13%;
 }
 
@@ -2168,7 +2168,7 @@ input, textarea {
 
 .search-category-item {
     width: 10%;
-    min-width: 10%;
+    min-width: 6.25%;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -2181,7 +2181,9 @@ input, textarea {
 
 .s-category-img {
     max-width: 100%;
+    width: 100%;
     border-radius: 6px;
+    height: 110px;
 }
 
 .name-category-item, .price-category-item, .buy-now {
@@ -2241,16 +2243,20 @@ input, textarea {
 }
 
 .button-details {
-    display: inline-block;
+    display: block;
+    text-align: center;
     color: #fff;
     background-color: #0275d8;
     border: 1px solid #0275d8;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     font-size: 12px;
     padding: 3px 6px;
     border-radius: 3px;
     margin-top: 5px;
+
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .button-details:hover {
@@ -2264,6 +2270,87 @@ input, textarea {
     font-size: 10px;
     font-weight: 500;
 }
+
+.tooltipDesign, .tooltip-new {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 1;
+
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, 0);
+    transition: all 0.1s ease;
+
+    width: 140px;
+    height: 170px;
+
+    font-size: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    z-index: 999;
+}
+
+.tooltipDesign img {
+    max-width: 100%;
+    width: 120px;
+    height: 110px;
+    border-radius: 3px;
+}
+
+.tooltipul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.tooltipul span {
+    display: block;
+    margin-top: 5px;
+}
+
+.tooltipul p {
+    padding-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
+.tooltip-new {
+    opacity: 1;
+    transform: none;
+    font-size: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.price-tooltip, .name-tooltip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name-tooltip {
+    padding-top: 5px;
+}
+
+.price-tooltip {
+    padding-top: 3px;
+}
+
+.image-tooltip {
+    max-width: 100%;
+    width: 120px;
+    height: 110px;
+    border-radius: 3px;
+}
+
+.best-price {
+    overflow: visible;
+}
+  
 
 
 
@@ -2282,7 +2369,7 @@ input, textarea {
         box-sizing: border-box;
     }
 
-    .categories-block {
+    .category-block {
         width: 23%;
     }
 
@@ -2320,13 +2407,13 @@ input, textarea {
         width: 24%;
     }
 
-    .categories-block {
+    .category-block {
         width: 17%;
         height: auto;
         margin: 10px;
     }
 
-    .categories-image {
+    .category-image {
         height: auto;
     }
 
@@ -2496,12 +2583,12 @@ input, textarea {
         padding-bottom: 60px;
     }
 
-    .categories-block {
+    .category-block {
         width: 23%;
         margin: 15px 0px 0px 0px;
     }
 
-    .flex-categories {
+    .flex-category {
         justify-content: space-between;
     }
 
@@ -2614,7 +2701,7 @@ input, textarea {
     .title-find, .counter {
         font-size: 35px;
     }
-    .categories-block {
+    .category-block {
         width: 48%;
     }
     .reg-link span {
